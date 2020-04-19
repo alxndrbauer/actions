@@ -1,4 +1,4 @@
-name: Backend Chat CI/CD
+name: CI/CD
 
 on:
   push:
@@ -17,5 +17,5 @@ jobs:
           uses: alxndrbauer/php-ci-action@master
         - name: dependencies
           run: |
-            composer -v
+            composer --version
             ls -la

@@ -11,10 +11,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    container: 'hfhit/php-cli:latest'
     steps:
         - uses: actions/checkout@v1
-        - name: Docker
-          uses: alxndrbauer/php-ci-action@master
         - name: dependencies
           run: |
             composer --version

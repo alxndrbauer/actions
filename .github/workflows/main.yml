@@ -11,17 +11,18 @@ on:
 jobs:
   composer-dependencies:
     runs-on: ubuntu-latest
-    container: 'hfhit/php-ci:latest'
+    container: 'hfhit/php-ci:php-73'
     steps:
         - uses: actions/checkout@v1
         - name: dependencies
           run: |
+            cd ..
             ls -la
-            sudo composer install
+            composer install
             
   node-dependencies:
     runs-on: ubuntu-latest
-    container: 'hfhit/php-ci:latest'
+    container: 'hfhit/php-ci:php-73'
     steps:
         - uses: actions/checkout@v1
         - name: dependencies

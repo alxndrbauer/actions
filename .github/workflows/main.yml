@@ -16,10 +16,10 @@ jobs:
         - uses: actions/checkout@v1
         - name: dependencies
           run: |
-            cd ..
             ls -la
             whoami
             id $(whoami)
+            su root
             composer install
             
   node-dependencies:

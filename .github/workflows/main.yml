@@ -18,6 +18,8 @@ jobs:
           run: |
             cd ..
             ls -la
+            whoami
+            id $(whoami)
             composer install
             
   node-dependencies:

@@ -16,6 +16,7 @@ jobs:
         - uses: actions/checkout@v1
         - name: dependencies
           run: |
+            ls -la
             composer install
             
   node-dependencies:

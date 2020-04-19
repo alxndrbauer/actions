@@ -17,7 +17,7 @@ jobs:
         - name: dependencies
           run: |
             ls -la
-            composer install
+            sudo composer install
             
   node-dependencies:
     runs-on: ubuntu-latest

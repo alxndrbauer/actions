@@ -9,13 +9,20 @@ on:
       - master
 
 jobs:
-  build:
+  composer-dependencies:
     runs-on: ubuntu-latest
     container: 'hfhit/php-ci:latest'
     steps:
         - uses: actions/checkout@v1
         - name: dependencies
           run: |
-            composer --version
-            ls -la
-            php -v
+            composer install
+            
+  node-dependencies:
+    runs-on: ubuntu-latest
+    container: 'hfhit/php-ci:latest'
+    steps:
+        - uses: actions/checkout@v1
+        - name: dependencies
+          run: |
+            yarn install            

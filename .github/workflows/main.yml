@@ -17,6 +17,7 @@ jobs:
         - name: dependencies
           run: |
             ls -la
+            ls -la
             whoami
             id $(whoami)
             su root
